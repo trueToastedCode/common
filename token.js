@@ -1,5 +1,5 @@
 export default function buildMakeToken ({ fs, jwt }) {
-  return function makeToken ({ keyPath = '../../secret.key', algorithm = 'RS256' } = {}) {
+  return function makeToken ({ keyPath = './secret.key', algorithm = 'RS256' } = {}) {
     const secret = fs.readFileSync(keyPath)
     return Object.freeze({
       sign,
