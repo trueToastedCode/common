@@ -1,4 +1,7 @@
 function renameProperty (obj, oldName, newName) {
+  if (obj[oldName] === undefined) {
+    return obj
+  }
   const value = obj[oldName]
   delete obj[oldName]
   obj[newName] = value
