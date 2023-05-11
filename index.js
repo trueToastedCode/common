@@ -3,7 +3,9 @@ export default function findFirstOfKeys (obj, keys) {
     if (obj[key] == null) {
       continue
     }
-    return { key, value }
+    const result = {}
+    result[key] = value
+    return result
   }
   return null
 }
