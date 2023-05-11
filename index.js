@@ -1,6 +1,7 @@
 export default function findFirstOfKeys (obj, keys) {
   for (const key of keys) {
-    if (obj[key] == null) {
+    const value = obj[key]
+    if (value == null) {
       continue
     }
     const result = {}
