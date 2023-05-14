@@ -3,7 +3,7 @@ import CustomError from '../custom-error'
 import makeAllSettledAndClean from './all-settles-and-clean'
 
 function getReasonsCode (reasons) {
-  if (errorCodes == null || errorCodes.length === 0) {
+  if (reasons == null || reasons.length === 0) {
     throw new Error('No reasons supplied')
   }
   const errorCodes = Array.from(
