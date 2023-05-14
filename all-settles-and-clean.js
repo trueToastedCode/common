@@ -3,8 +3,7 @@ export default function makeAllSettledAndClean ({ CustomError, getReasonsCode })
     if (cleanFunctions != null && functions.length !== cleanFunctions.length) {
       throw new Error(`Length of functions doesn't match length of cleanFunctions`)
     }
-    const results = await Promise.allSettled(
-      functions.map(f => f()))
+    const results = await Promise.allSettled(functions)
     const isSomeRejected = results.some(
       result => result.status === 'rejected')
     if (!isSomeRejected) {
