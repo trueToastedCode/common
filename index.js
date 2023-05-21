@@ -7,7 +7,7 @@ function parseCredentials (data) {
   if (data == null) {
     throw new Error('No data provided')
   }
-  const index = text.search(':')
+  const index = data.search(':')
   if (index === -1) {
     throw new Error('Seperator not found')
   }
